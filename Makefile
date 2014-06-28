@@ -11,6 +11,7 @@ CFLAGS = -ansi -c -g -O0 -Wall
 
 # a list of the .c files in the project.
 SOURCES = CtoF.c    \
+          CtoK.c    \
           FtoC.c    \
           FtoK.c    \
           Main.c
