@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "CtoF.h"
+#include "CtoK.h"
 #include "FtoC.h"
 #include "FtoK.h"
 
@@ -20,7 +21,7 @@ static void Help(int pExitCode, char *pExitMsg)
     printf("Usage: tempc -f|-c number\n");
     printf("Options:\n");
     printf("    -f   Convert temperature from Fahr to Cels and Kelvin.\n");
-    printf("    -c   Convert temperature from Cels to Fahr.\n");
+    printf("    -c   Convert temperature from Cels to Fahr and Kelvin.\n");
     exit(pExitCode);
 }
 
@@ -32,7 +33,7 @@ int main(int pArgc, char *pArgv[])
     }
     double temp = StrToDouble(pArgv[2]);
     if (streq(pArgv[1], "-f")) printf("%.3lf C, %.3lf K\n", FtoC(temp), FtoK(temp));
-    else printf("%.3lf\n", CtoF(temp));
+    else printf("%.3lf F, %.3lf K\n", CtoF(temp), CtoK(temp));
     return 0;
 }
 
