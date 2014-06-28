@@ -3,6 +3,9 @@
 *.ko
 *.obj
 *.elf
+*.d
+tempc
+*.gitignore
 
 # Libraries
 *.lib

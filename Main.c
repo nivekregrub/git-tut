@@ -26,7 +26,7 @@ static void Help(int pExitCode, char *pExitMsg)
 
 int main(int pArgc, char *pArgv[])
 {
-    if (pArgc != 3) Help(-1, "Incomplete command line.");
+    if (pArgc != 3) Help(-9, "Incomplete command line.");
     if (strneq(pArgv[1], "-f") && strneq(pArgv[1], "-c")) {
         Help(-2, "Invalid option on command line.");
     }
